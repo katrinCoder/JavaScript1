@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "strict";
+
+        let sum = function(a, b) {
+            return a+b;
+        }
+
+        let dif = function(a, b) {
+            if (a >= b) {
+                return a - b;
+            }
+            else return b - a;
+        }
+
+        let comp = function(a, b) {
+            return a * b;
+        }
+
+        let div = function(a, b) {
+            return a/b;
+        }
+
+        let a = +prompt("Введите любое целое число а");
+        let b = +prompt("Введите любое целое число b");
+
+        alert("Сумма чисел равна " + sum(a, b) + "\n"
+                + "Разница чисел равна " + dif(a, b) + "\n"
+                + "Произведение чисел равно " + comp(a, b) + "\n"
+                + "Деление чисел равно " + div(a, b));
+    </script>
+</body>
+</html>

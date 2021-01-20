@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "strict";
+
+        let result = function(a, b, act) {
+            switch (act) {
+
+                case "+":
+                    return a+b;
+
+                case "-":
+                    if (a >= b) {
+                        return a - b;
+
+                    } else return b - a;
+
+                case "*":
+                    return a * b;
+
+                case "/":
+                    return a/b;
+
+                default: alert("Вы ввели неверную операцию");
+            }
+        }
+
+        let a = +prompt("Введите любое целое число а");
+        let b = +prompt("Введите любое целое число b");
+        let action = prompt("Введите операцию для чисел + - * /");
+
+        alert("Результат операции " + action + " для чисел " + a + " и " + b + " равняется " + result(a, b, action));
+    </script>
+</body>
+</html>

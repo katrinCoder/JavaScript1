@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "strict";
+
+        let textRub = function(n) {
+
+            switch (n) {
+
+                case 0:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    return "рублей";
+
+                case 1:
+                    return "рубль";
+
+                case 2:
+                case 3:
+                case 4:
+                    return "рубля";
+            }
+        }
+
+        let lastNum = function(number) {
+            number = String(number);
+            return Number(number.charAt(number.length - 1));
+        }
+
+        let sumToBank = +prompt("Введите сумму, которую хотите перевести на счет в банк: ");
+        alert("Ваша сумма в " + sumToBank + " " + textRub(lastNum(sumToBank)) + " успешно зачислена.");
+
+    </script>
+</body>
+</html>
