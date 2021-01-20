@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "strict";
+
+        // let a = 3;
+        // let b = 5;
+        let a = +prompt("Введите любое целое число а");
+        let b = +prompt("Введите любое целое число b");
+
+        if (a >= 0 && b >= 0) {
+            if (a >= b) {
+                alert("a - b = " + (a - b));
+            }
+            else alert("b - a = "+ (b - a));
+
+        } else if (a < 0 && b < 0) {
+            alert("a * b = " + (a * b));
+
+        } else if ((a >= 0 && b < 0) || (a < 0 && b >= 0)){
+            alert("a + b = "+ (a + b));
+
+        } else alert("Вы ввели не числа");
+    </script>
+</body>
+</html>
