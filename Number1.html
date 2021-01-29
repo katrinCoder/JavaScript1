@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork 4</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        function CovertNumberToObject(number) {
+            // let units;
+            // let tens;
+            // let hundreds;
+            // let numberObject;
+
+            function NumberObject(units, tens, hundreds) {
+                this.units = units;
+                this.tens = tens;
+                this.hundreds = hundreds;
+            }
+
+            if (!Number.isInteger(number) || number < 0 || number > 999) {
+                console.log("Вы ввели не число от 0 до 999");
+                return new NumberObject();
+            }
+
+            let units = number%10;
+            let tens = ((Math.floor(number/10))%10);
+            let hundreds = Math.floor(number/100);
+            
+            return new NumberObject(units, tens, hundreds);
+        }
+
+        const number = +prompt("Введите любое целое число от 0 до 999");
+        let numberObj = CovertNumberToObject(number);
+
+    </script>
+</body>
+</html>
